@@ -52,7 +52,6 @@ public abstract class Bag {
     public int getCapacity() {
         return capacity;
     }
-;
 
     /*
      * TODO: Create a setter function called setColor which sets the
@@ -121,7 +120,7 @@ public abstract class Bag {
     public void increaseCapacity(int n) {
         // TODO: Implement this method.
         capacity += n;
-        for
+
 
     }
 
