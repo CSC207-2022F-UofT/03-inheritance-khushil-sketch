@@ -98,14 +98,14 @@ public abstract class Bag {
      * @return
      */
     public String popItem(){
-        if (!(this.contents[this.numberOfContents - 1].equals(""))) {
+        if (this.contents.length == 0) {
+            return null;
+        }
+        else {
             String popped = this.contents[this.numberOfContents - 1];
             this.contents[this.numberOfContents - 1] = "";
             this.numberOfContents -= 1;
             return popped;
-        }
-        else {
-            return null;
         }
     }
 
