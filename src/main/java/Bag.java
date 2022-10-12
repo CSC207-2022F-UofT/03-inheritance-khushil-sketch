@@ -32,6 +32,8 @@ public abstract class Bag {
     public Bag(String color, int capacity) {
         this.color = color;
         this.capacity = capacity;
+        this.numberOfContents = 0;
+        this.contents = new String[capacity];  // The error is that I hadn't created an array of size == the bag capacity.
 
     }
 
@@ -75,8 +77,8 @@ public abstract class Bag {
      *       and false otherwise.
      */
     public boolean addItem(String bagItem){
-        if (this.numberOfContents < this.capacity) {
-            this.contents[this.numberOfContents] = bagItem;
+        if (getNumberOfContents() < getCapacity()) {
+            this.contents[getNumberOfContents()] = bagItem;
             this.numberOfContents += 1;
             return true;
         }

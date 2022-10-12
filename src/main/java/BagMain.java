@@ -40,7 +40,8 @@ class BagMain {
         int total = 0;
         for (Bag bag : bags) {
             if (bag instanceof CrossbodyBag) {
-                total += ((CrossbodyBag) bag).getNumberOfStraps();
+                total += ((CrossbodyBag) bag).getNumberOfStraps();  // Downcasting so that we csn use the getNumber
+                // ofStraps method which is only available in the Crossbodybags method
             }
         }
         return total;
